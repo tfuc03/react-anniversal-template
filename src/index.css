@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Định nghĩa font class thủ công (Tailwind v4 style) */
+@layer base {
+  /* .font-cormorant {
+    font-family: "Cormorant Garamond", serif;
+  } */
+
+  .font-slogan {
+    font-family: "Lora", serif;
+  }
+
+  .font-title {
+    font-family: "Parisienne", cursive;
+  }
+
+  .font-str {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-des {
+    font-family: "Nunito", sans-serif;
+  }
+
+  body {
+    @apply bg-[#FFF2E1] text-black ;
+  }
+}
+
+
+@layer utilities {
+  .container {
+    @apply px-4 mx-auto  md:px-8 lg:px-12 2xl:max-w-screen-xl;
+  }
+  p {
+    @apply text-sm sm:text-base md:text-lg text-neutral-400;
+  }
+  .section {
+    @apply py-28 lg:py-36;
+  }
+  h2 {
+    @apply text-2xl  lg:text-4xl font-semibold;
+  }
+  .input {
+    @apply h-12 w-full border border-neutral-800 indent-4 py-2;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
