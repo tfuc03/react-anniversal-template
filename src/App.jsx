@@ -1,18 +1,35 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import TextType from './components/TextType'
 import Header from './layout/Header'
 import FirstStory from './layout/FirstStory'
+import FirstAdventure from './layout/FirstAdventure'
+import Us from './layout/Us'
+import InTheFuture from './layout/InTheFuture'
+import ReCap from './layout/ReCap'
 
 function App() {
+
   return (
     <>
     <section>
-      <div className='flex flex-col bg-[linear-gradient(120deg,#FFF2E1_0%,#FFE3E3_40%,#E8EAF6_100%)] w-full p-10 md:gap-y-10 lg:gap-y-20'>
-        <Header/>
+      <div className='flex flex-col bg-[linear-gradient(120deg,#FFF2E1_0%,#FFE3E3_40%,#E8EAF6_100%)] w-full p-10 h-screen md:gap-y-10 lg:gap-y-20'>
+        <Header onScrollClick={handleScrollToStory}/>
         
       </div>
       <div>
-        <FirstStory/>
+        <FirstStory ref={firstStoryRef}/>
+      </div>
+      <div>
+        <FirstAdventure />
+      </div>
+      <div>
+        <Us />
+      </div>
+      <div>
+        <InTheFuture />
+      </div>
+      <div>
+        <ReCap />
       </div>
     </section>
       
