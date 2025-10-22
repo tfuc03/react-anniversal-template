@@ -7,10 +7,10 @@ const TextType = ({
   text,
   as: Component = 'div',
   typingSpeed = 50,
-  initialDelay = 0,
-  pauseDuration = 0,
+  initialDelay = 50,
+  pauseDuration = 2000,
   deletingSpeed = 30,
-  loop = false,
+  loop = true,
   className = '',
   showCursor = true,
   hideCursorWhileTyping = false,
@@ -41,7 +41,7 @@ const TextType = ({
   }, [variableSpeed, typingSpeed]);
 
   const getCurrentTextColor = () => {
-    if (textColors.length === 0) return '#000000';
+    if (textColors.length === 0) return '#2F2A24';
     return textColors[currentTextIndex % textColors.length];
   };
 
@@ -153,7 +153,7 @@ const TextType = ({
     Component,
     {
       ref: containerRef,
-      className: `inline-block whitespace-pre-line tracking-tight ${className}`,
+      className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
       ...props
     },
     <span className="inline" style={{ color: getCurrentTextColor() }}>
