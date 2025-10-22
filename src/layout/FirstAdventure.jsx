@@ -2,6 +2,7 @@ import React from 'react'
 import TiltedCard from '../components/TiltedCard';
 import { motion } from 'motion/react';
 
+
 function FirstAdventure() {
   return (
     <main className='flex flex-col-reverse items-center h-auto bg-[linear-gradient(120deg,#FFEACB_0%,#FFD6D6_40%,#DDE0F2_100%)]  lg:flex-row lg:pb-10 lg:items-center lg:justify-between'>
@@ -26,8 +27,8 @@ function FirstAdventure() {
             whileInView={{opacity: 1, scale: 1}}
             transition={{duration: 0.6, delay:0.5}}
             viewport={{once:true}}
-            className='flex flex-col items-end mt-5 mb-5 w-[200px] h-[200px] border-3 rounded-2xl border-double shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] cursor-target md:w-[350px] md:h-[350px] md:mt-10 md:mb-10  lg:mt-20 lg:mb-10 lg:w-[600px] lg:h-[450px] lg:w-1/2 lg:mr-30'>
-                 <TiltedCard
+            className='flex flex-col items-end mt-5 mb-5 w-[200px] h-[200px] border-3 rounded-2xl border-double shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] cursor-target md:w-[350px] md:h-[350px] md:mt-10 md:mb-10  lg:mt-20 lg:mb-10 lg:w-[600px] lg:h-[450px] lg:w-1/2 lg:mr-30 overflow-hidden'>
+                 {/* <TiltedCard
             
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
             altText="Kendrick Lamar - GNX Album Cover"
@@ -45,11 +46,11 @@ function FirstAdventure() {
                 </p>
             
             }
-            />
-            </motion.div>
+            /> */}
+           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JlRW20A-hr4" title="Adventure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             
            
-      
+      </motion.div>
         </main>
   )
 }

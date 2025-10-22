@@ -709,6 +709,12 @@ class InfiniteGridMenu {
             const img = new Image();
             img.crossOrigin = 'anonymous';
             img.onload = () => resolve(img);
+
+            img.onerror = () => {
+              console.error(`Failed to load image: ${item.image}`);
+              resolve(null); // Báo là đã xong (với kết quả null)
+            };
+
             img.src = item.image;
           })
       )
@@ -716,7 +722,14 @@ class InfiniteGridMenu {
       images.forEach((img, i) => {
         const x = (i % this.atlasSize) * cellSize;
         const y = Math.floor(i / this.atlasSize) * cellSize;
-        ctx.drawImage(img, x, y, cellSize, cellSize);
+        if (img) {
+          // Chỉ vẽ nếu ảnh tải thành công
+          ctx.drawImage(img, x, y, cellSize, cellSize);
+        } else {
+          // (Tùy chọn) Vẽ một ô màu xám để biết ảnh nào bị lỗi
+          ctx.fillStyle = '#333';
+          ctx.fillRect(x, y, cellSize, cellSize);
+        }
       });
 
       gl.bindTexture(gl.TEXTURE_2D, this.tex);

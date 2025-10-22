@@ -16,8 +16,8 @@ function FirstStory() {
         className=' cursor-target ml-10 mt-5 mb-5 w-[200px] h-[200px] border-3 rounded-2xl border-double shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] md:w-[350px] md:h-[350px] md:ml-15 md:mt-10 md:mb-10 lg:mt-20 lg:mb-10 lg:w-[400px] lg:h-[400px] lg:w-1/2 lg:mr-20'>
              <TiltedCard
         
-        imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-        altText="Kendrick Lamar - GNX Album Cover"
+        imageSrc="/images/photo31.JPG"
+        altText="First Date"
         containerHeight="100%"
         containerWidth="100%"
         imageHeight="100%"
